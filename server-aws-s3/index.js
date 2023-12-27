@@ -14,6 +14,6 @@ app.use(fileUpload({
 }));
 
 app.use(photosRoutes);
-
+app.use(express.static('images'));
 app.listen(3000);
 console.log("server on port 3000");
