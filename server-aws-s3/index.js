@@ -1,7 +1,12 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
+const cors = require('cors');
 const photosRoutes = require("./photos.routes")
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:5173'
+}))
 
 app.use(fileUpload({
     useTempFiles : true,
